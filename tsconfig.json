@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2023", "DOM"],
+    "strict": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
+  "include": ["src"]
+}
