@@ -1,3 +1,7 @@
+import {
+  SEARCH_TIMEOUT_MS,
+  combineSearchSignals,
+} from './classifySearchError.js';
 import { HttpError } from './httpError.js';
 import {
   mapCountryResponse,
@@ -17,7 +21,12 @@ export async function searchCountries(
 
   const response = await fetch(
     `https://countries.dev/name/${encodeURIComponent(trimmed)}`,
-    { signal },
+    {
+      signal: combineSearchSignals(
+        signal,
+        AbortSignal.timeout(SEARCH_TIMEOUT_MS),
+      ),
+    },
   );
 
   if (response.status === 404) {
