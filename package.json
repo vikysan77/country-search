@@ -1,0 +1,40 @@
+{
+  "name": "country-search",
+  "version": "1.0.0",
+  "description": "Живой поиск стран. Реализация — в ветке `country-search`.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "build": "tsc",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,js,json,md,html,css}": "prettier --write",
+    "*.{ts,js}": "eslint --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikysan77/country-search.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/vikysan77/country-search/issues"
+  },
+  "homepage": "https://github.com/vikysan77/country-search#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "prettier": "^3.10.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.2",
+    "vitest": "^5.1.0"
+  }
+}
